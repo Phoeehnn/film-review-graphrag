@@ -15,12 +15,12 @@ st.title('Agent · 最终任务人工复核')
 st.caption('20 个问题各运行 3 次。这里只判断最终任务是否完成；工具选择正确不等于答案正确。')
 manual_link()
 root = Path(__file__).resolve().parents[1]
-fixture = json.loads((root / 'evaluation/agent/questions.json').read_text(encoding='utf-8'))
 runs = sorted((root / 'evaluation/agent/runs').glob('*'), reverse=True)
 runs = [path for path in runs if agent_complete(path)]
 if not runs:
-    st.info('最新版 60 次 Agent 运行和人工评分表尚未准备好。')
+    st.info('暂无可用的 Agent 评测数据。运行结果与评分记录不随公开仓库提供；准备好完整数据后可在此复核。')
     st.stop()
+fixture = json.loads((root / 'evaluation/agent/questions.json').read_text(encoding='utf-8'))
 run = st.selectbox('实验目录', runs, format_func=lambda path: path.name)
 config = json.loads((run / 'run-config.json').read_text(encoding='utf-8'))
 st.caption(f"本次回答对应服务版本：{config['service_version']}；请核对最新运行目录后再评分。")

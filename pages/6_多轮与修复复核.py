@@ -14,7 +14,7 @@ kind=st.radio('实验类别',['conversation','repair','long-conversation'],forma
 runs=sorted((ROOT/'evaluation/v3/runs'/kind).glob('*'),reverse=True)
 runs=[r for r in runs if (r/'progress.json').exists() and json.loads((r/'progress.json').read_text(encoding='utf-8')).get('state')=='complete' and (r/'human-scores.csv').exists()]
 if not runs:
-    st.info('这组新版真实对照尚未完成，完成后才能在此评分。');st.stop()
+    st.info('暂无可用的多轮或修复评测数据。运行结果与评分记录不随公开仓库提供；准备好完整数据后可在此复核。');st.stop()
 run=st.selectbox('运行目录',runs,format_func=lambda p:p.name)
 config=json.loads((run/'run-config.json').read_text(encoding='utf-8'))
 st.caption('服务版本：'+config['service_version']+'；不要混用其他版本的答案。')

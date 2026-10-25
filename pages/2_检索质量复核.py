@@ -18,7 +18,7 @@ root=Path(__file__).resolve().parents[1]
 runs=sorted((root/'evaluation/retrieval/runs').glob('*'),reverse=True)
 runs=[run for run in runs if retrieval_complete(run)]
 if not runs:
-    st.info('独立检索基线尚未完成，完成后可在这里复核。')
+    st.info('暂无可用的检索评测数据。运行结果与评分记录不随公开仓库提供；准备好完整数据后可在此复核。')
     st.stop()
 run=st.selectbox('运行日期',runs,format_func=lambda path:path.name)
 config=json.loads((run/'run-config.json').read_text(encoding='utf-8'))
@@ -27,8 +27,11 @@ questions=json.loads((run/'questions.json').read_text(encoding='utf-8'))['questi
 results=json.loads((run/'results.json').read_text(encoding='utf-8'))
 with (run/'relevance.csv').open(encoding='utf-8-sig',newline='') as handle:
     labels=list(csv.DictReader(handle))
-scored=sum(row['relevance']!='' for row in labels)
-st.progress(scored/len(labels) if labels else 0,text=f'已标注 {scored}/{len(labels)} 个结果位置，同题同评论会同步到两个组件。')
+confirmed=sum(row.get('review_status')=='human_confirmed' for row in labels)
+pending=sum(row.get('review_status')=='ai_pending' for row in labels)
+st.progress(confirmed/len(labels) if labels else 0,text=f'人工已复核 {confirmed}/{len(labels)} 个结果位置；AI建议待核 {pending} 个，同题同评论会同步到两个组件。')
+if pending:
+    st.warning('当前评分表已预填 AI 初评分，报告显示的是待复核预览值。请逐条检查并保存；全部复核后，才作为人工确认的正式指标。')
 reviewer=st.text_input('评分人（保存时必填）')
 question=st.selectbox('问题',questions,format_func=lambda q:q['id']+' · '+q['query'])
 st.subheader(question['query'])
@@ -55,8 +58,15 @@ for result in (r for r in results if r['question_id']==question['id']):
                 continue
             seen.add(identifier)
             old=index[(question['id'],identifier)]
+            suggested=old.get('ai_suggested_relevance','')
+            select_key=f"relevance_{run.name}_{question['id']}_{identifier}"
+            if suggested:
+                state_label='已人工确认' if old.get('review_status')=='human_confirmed' else 'AI初评，待复核'
+                st.info(f"{state_label}：当前 {old['relevance']} 分；AI建议 {suggested} 分。请核对评论，可修改后保存。")
+                st.caption('建议理由：'+old.get('ai_rationale',''))
             choices=['未评分','2','1','0']
-            mark=st.selectbox('相关性',choices,index=choices.index(old['relevance'] or '未评分'),key=f"relevance_{run.name}_{question['id']}_{identifier}",format_func=lambda value:{'未评分':'未评分 · 待核实','2':'2 · 全部要点相关','1':'1 · 部分相关','0':'0 · 无关或违反条件'}[value])
+            default=old['relevance'] or suggested or '未评分'
+            mark=st.selectbox('相关性',choices,index=choices.index(default),key=select_key,format_func=lambda value:{'未评分':'未评分 · 待核实','2':'2 · 全部要点相关','1':'1 · 部分相关','0':'0 · 无关或违反条件'}[value])
             note=st.text_input('判断依据',value=old['notes'],key=f"notes_{run.name}_{question['id']}_{identifier}")
             updates[identifier]={'relevance':'' if mark=='未评分' else mark,'notes':note}
 if st.button('保存本题相关性',type='primary'):
@@ -66,6 +76,8 @@ if st.button('保存本题相关性',type='primary'):
         for row in labels:
             if row['question_id']==question['id']:
                 row.update(updates[row['comment_id']]);row['reviewer']=reviewer.strip()
+                row['review_status']='human_confirmed' if row['relevance'] in ('0','1','2') else 'unreviewed'
+                row['confirmation_source']='user_ui_question_save'
         target=run/'relevance.csv';temporary=target.with_suffix('.tmp')
         with temporary.open('w',encoding='utf-8-sig',newline='') as handle:
             writer=csv.DictWriter(handle,fieldnames=list(labels[0]));writer.writeheader();writer.writerows(labels)

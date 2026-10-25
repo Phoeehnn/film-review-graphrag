@@ -74,6 +74,7 @@ def normalize_name(value: str) -> str:
 def resolve_filters(question: str, filters: Filters, movies: list[str], topics: list[dict]) -> ResolvedFilters:
     q = normalize_name(question)
     movie_names = [filters.movie] if filters.movie else [name for name in movies if len(normalize_name(name)) >= 2 and normalize_name(name) in q]
+    matched_aliases = []
     if not filters.movie:
         # Reviewed aliases resolve only to a unique title present in the catalogue.
         from pathlib import Path
@@ -82,14 +83,22 @@ def resolve_filters(question: str, filters: Filters, movies: list[str], topics: 
         for alias,title in aliases.items():
             if normalize_name(alias) in q:
                 matches=[name for name in movies if normalize_name(title) in normalize_name(name)]
-                if len(matches)==1:movie_names.extend(matches)
+                if len(matches)==1:movie_names.extend(matches);matched_aliases.append(alias)
     # Unique distinctive title prefixes allow shortened movie names, e.g. 肖申克.
-    if not movie_names and not filters.movie:
+    # Run for every question, not only when nothing matched yet: in
+    # "对比肖申克和大圣归来" the alias 大圣归来 must not hide 肖申克. Spans already
+    # matched by a full title or alias are masked first so they cannot match twice.
+    if not filters.movie:
+        rest = q
+        for matched in sorted({normalize_name(n) for n in movie_names}|{normalize_name(a) for a in matched_aliases},key=len,reverse=True):
+            rest = rest.replace(matched, '|')
         for name in movies:
+            if name in movie_names:
+                continue
             norm = normalize_name(name)
             for width in range(min(6, len(norm)), 2, -1):
                 part = norm[:width]
-                if part in q and sum(part in normalize_name(other) for other in movies) == 1:
+                if part in rest and sum(part in normalize_name(other) for other in movies) == 1:
                     movie_names.append(name)
                     break
     topic_names = [canonical_topic(filters.topic)] if filters.topic else mentioned_topics(question)

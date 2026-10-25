@@ -17,7 +17,7 @@ runs=[p for p in runs if (p/'human-scores.csv').exists() and (p/'progress.json')
       and json.loads((p/'progress.json').read_text(encoding='utf-8')).get('state')=='complete'
       and len(list((p/'responses').glob('*.json')))==168]
 if not runs:
-    st.info('168 次真实问答正在准备或运行；完成后可在此逐题评分。')
+    st.info('暂无可用的问答评测数据。运行结果与评分记录不随公开仓库提供；准备好完整数据后可在此复核。')
     st.stop()
 run=st.selectbox('实验日期目录',runs,format_func=lambda p:p.name)
 config=json.loads((run/'run-config.json').read_text(encoding='utf-8'))
