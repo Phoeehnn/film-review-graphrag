@@ -1,0 +1,46 @@
+:root { --ink: #172f3b; --muted: #647680; --green: #16766a; --line: #e3e7e3; }
+.stApp { background: #f7f6f2; font-family: "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif; }
+.stMainBlockContainer { max-width: 1260px; padding: 2rem 2.8rem 5rem; }
+section[data-testid="stSidebar"] { background: #f0f1ec; border-right: 1px solid #e0e5df; }
+section[data-testid="stSidebar"] .stSidebarContent { padding-top: 1.2rem; }
+[data-testid="stSidebarNav"] { display: none; }
+h1, h2, h3 { letter-spacing: -.025em; color: var(--ink); }
+.brand { display: flex; align-items: center; gap: 12px; margin: 0 0 22px; }
+.brand-symbol { display: grid; place-items: center; width: 39px; height: 39px; border-radius: 12px; background: #173d45; color: #fff; font-size: 22px; }
+.brand b { font-size: 18px; letter-spacing: .04em; }
+.brand small { display: block; font-size: 10px; color: #728187; letter-spacing: .16em; margin-top: 4px; }
+.eyebrow { color: #448579; font-size: 11px; letter-spacing: .18em; font-weight: 650; margin-bottom: 13px; }
+.hero { position: relative; display: flex; align-items: center; gap: 20px; padding: 38px 36px 32px; border-radius: 24px; background: linear-gradient(115deg,#e8f2ed,#f2f2e8); border: 1px solid #dce9df; overflow: hidden; margin-bottom: 5px; }
+.hero-copy { flex: 1 1 52%; z-index: 1; }
+.hero h1 { font-size: clamp(29px,2.5vw,43px); line-height: 1.28; font-weight: 720; margin: 0 0 18px; color: #173d45; }
+.hero p { color: #526e73; font-size: 15px; line-height: 1.8; margin: 0 0 20px; max-width: 510px; }
+.hero-visual { flex: 1 1 43%; min-width: 260px; }
+.hero-visual svg { width: 100%; height: auto; display: block; }
+.hero-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.hero-chips span { display: inline-block; border: 1px solid #cfded3; border-radius: 30px; background: #ffffffa8; padding: 5px 12px; color: #386c62; font-size: 11px; }
+.hero-visual-caption { color: #78908e; font-size: 10px; text-align: right; margin-top: 0; }
+.metric-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin: 21px 0 30px; }
+.metric-tile { padding: 18px 20px; border: 1px solid #e2e7e2; border-radius: 14px; background: #fff; }
+.metric-tile small { font-size: 12px; color: #76878c; }
+.metric-tile strong { display: block; margin: 5px 0; font-size: 27px; font-weight: 680; color: #1d4249; font-variant-numeric: tabular-nums; }
+.metric-tile span { font-size: 11px; color: #8a989a; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin: 18px 0 10px; }
+.section-heading h2 { margin: 0; font-size: 22px; }
+.section-heading > span { font-size: 12px; color: #8a9799; }
+.intro-card { padding: 24px 26px; background: #fff; border: 1px solid #e0e7e1; border-radius: 17px; min-height: 188px; }
+.intro-card .number { color: #c5a267; font-size: 13px; font-weight: 600; letter-spacing: .1em; }
+.intro-card h3 { margin: 9px 0 10px; font-size: 19px; }
+.intro-card p { color: #6d7e84; font-size: 14px; line-height: 1.8; margin: 0; }
+.note-strip { padding: 15px 20px; border-left: 3px solid #8bad9b; border-radius: 0 10px 10px 0; background: #edf2ec; color: #5a7574; font-size: 12px; line-height: 1.8; margin: 16px 0 20px; }
+.page-lead { max-width: 800px; color: #6a7d83; font-size: 16px; line-height: 1.9; margin-bottom: 26px; }
+.compact-heading { color: #254b50; font-size: 28px; font-weight: 680; margin: 7px 0; }
+.graph-note { font-size: 12px; color: #829294; text-align: center; margin-bottom: 18px; }
+div[data-testid="stVerticalBlockBorderWrapper"] > div { border-radius: 15px; background: #fff; border-color: #e2e8e2; }
+div[data-testid="stButton"] > button { border-radius: 9px; font-size: 14px; min-height: 42px; }
+div[data-testid="stPageLink"] a { border-radius: 10px; }
+div[data-testid="stChatMessage"] { border-radius: 16px; padding: 20px; border: 1px solid #e2e8e2; }
+div[data-testid="stChatMessage"] p { line-height: 1.85; }
+div[data-testid="stChatInput"] { border-radius: 16px; border-color: #bdcfc4; box-shadow: 0 5px 25px #173d4510; }
+div[data-testid="stBottom"] > div { background: #f7f6f2; }
+button[data-baseweb="tab"] { font-size: 13px; }
+@media (max-width: 850px) { .stMainBlockContainer { padding: 1.1rem 1.2rem 4rem; } .hero { padding: 27px 24px; flex-direction: column; align-items: stretch; } .hero-visual { min-width: 0; max-width: 470px; width: 100%; align-self: center; } .metric-row { grid-template-columns: repeat(2,1fr); } .metric-tile { padding: 14px; } .metric-tile strong { font-size: 24px; } .section-heading > span { display: none; } }

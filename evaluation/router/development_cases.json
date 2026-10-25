@@ -1,0 +1,199 @@
+{
+  "version": "2026-09-30",
+  "note": "人工编写的规则开发/回归题集，含审查反例。调规则时会用到本集，不能称为独立留出集或自动路由真实回答准确率。",
+  "cases": [
+    {
+      "expected": "graph",
+      "question": "数据集中一共有多少部电影？"
+    },
+    {
+      "expected": "graph",
+      "question": "肖申克的救赎有多少条样本评论？"
+    },
+    {
+      "expected": "graph",
+      "question": "评分最高的前五部电影是什么？"
+    },
+    {
+      "expected": "graph",
+      "question": "中性评论里预测愤怒的数量最多的是哪些电影？"
+    },
+    {
+      "expected": "graph",
+      "question": "按月统计这部电影评论数量的趋势。"
+    },
+    {
+      "expected": "graph",
+      "question": "各主题的评论数量分布如何？"
+    },
+    {
+      "expected": "graph",
+      "question": "正面评论占比最高的电影是哪部？"
+    },
+    {
+      "expected": "graph",
+      "question": "哪些电影的矛盾评论比例最高？"
+    },
+    {
+      "expected": "graph",
+      "question": "性别议题下情感最负面的前5条评论。"
+    },
+    {
+      "expected": "graph",
+      "question": "找点赞最多的前10条影评。"
+    },
+    {
+      "expected": "graph",
+      "question": "肖申克样本中负面率是多少？"
+    },
+    {
+      "expected": "graph",
+      "question": "不同情绪的平均点赞数是多少？"
+    },
+    {
+      "expected": "graph",
+      "question": "有几部电影超过500条评论？"
+    },
+    {
+      "expected": "graph",
+      "question": "18个主题各自有多少条评论？"
+    },
+    {
+      "expected": "graph",
+      "question": "三块广告牌的预测情绪分布。"
+    },
+    {
+      "expected": "graph",
+      "question": "评论里五星但负面情绪的前3条有哪些？"
+    },
+    {
+      "expected": "vector",
+      "question": "有没有人说过类似“影片名气远远超过实际观感”这样的意思？"
+    },
+    {
+      "expected": "vector",
+      "question": "有哪些评论提到配乐很好听？"
+    },
+    {
+      "expected": "vector",
+      "question": "找几条表达明知有缺点仍喜欢的影评。"
+    },
+    {
+      "expected": "vector",
+      "question": "有没有类似‘困在笼子里仍有希望’的评论？"
+    },
+    {
+      "expected": "vector",
+      "question": "找表达相同意思的影评：演员很出色但剧情散乱。"
+    },
+    {
+      "expected": "vector",
+      "question": "有人说过自由比眼前的痛苦更重要吗？"
+    },
+    {
+      "expected": "vector",
+      "question": "哪些影评谈到父亲与孩子和解？"
+    },
+    {
+      "expected": "vector",
+      "question": "找表达孤独但最终释怀的评论。"
+    },
+    {
+      "expected": "vector",
+      "question": "观众有没有写过类似“笑声里夹着一点难受”这样的评论？"
+    },
+    {
+      "expected": "vector",
+      "question": "找有关电影让人重新相信善意的表达。"
+    },
+    {
+      "expected": "vector",
+      "question": "有没有人用别的说法吐槽节奏拖沓？"
+    },
+    {
+      "expected": "vector",
+      "question": "哪些评论说到结尾令人意外？"
+    },
+    {
+      "expected": "vector",
+      "question": "找几条写导演镜头语言很克制的影评。"
+    },
+    {
+      "expected": "vector",
+      "question": "有没有评论表达配角比主角更动人？"
+    },
+    {
+      "expected": "vector",
+      "question": "请找和“角色一直在自我欺骗”意思相近的评论。"
+    },
+    {
+      "expected": "vector",
+      "question": "找几条关于战争荒诞和无意义的语义近邻。"
+    },
+    {
+      "expected": "hybrid",
+      "question": "肖申克正面占比多少，为什么观众喜欢？"
+    },
+    {
+      "expected": "hybrid",
+      "question": "哪部电影矛盾率最高，结合评论解释原因？"
+    },
+    {
+      "expected": "hybrid",
+      "question": "统计性别议题的评论数量，再给我两个例子。"
+    },
+    {
+      "expected": "hybrid",
+      "question": "中性评论中预测愤怒的比例是多少？举评论说明。"
+    },
+    {
+      "expected": "hybrid",
+      "question": "评分最高的电影是哪部？结合评论说说观众为何认可。"
+    },
+    {
+      "expected": "hybrid",
+      "question": "这部电影评价怎么样？"
+    },
+    {
+      "expected": "hybrid",
+      "question": "观众对这部作品怎么看？"
+    },
+    {
+      "expected": "hybrid",
+      "question": "统计主题分布，再用代表影评解释。"
+    },
+    {
+      "expected": "hybrid",
+      "question": "哪个月负面评论最多，结合评论解释变化？"
+    },
+    {
+      "expected": "hybrid",
+      "question": "这部电影的口碑与评论主题有什么联系？"
+    },
+    {
+      "expected": "hybrid",
+      "question": "哪些电影隐藏愤怒最集中，并用评论说明？"
+    },
+    {
+      "expected": "hybrid",
+      "question": "五星但负面情绪的样本有多少？给评论解释这个矛盾。"
+    },
+    {
+      "expected": "hybrid",
+      "question": "正面评论数量第一的是谁？找两条它的评论解释。"
+    },
+    {
+      "expected": "hybrid",
+      "question": "肖申克有哪些主要主题，举两个原文例子。"
+    },
+    {
+      "expected": "hybrid",
+      "question": "低分评论中喜爱情绪占比如何？给几条评论帮助理解。"
+    },
+    {
+      "expected": "hybrid",
+      "question": "哪部电影的观众更容易失望，结合文本说明？"
+    }
+  ],
+  "publication_note": "Sanitized/synthetic development examples; reported private frozen benchmark scores do not apply to this rewritten fixture."
+}

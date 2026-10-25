@@ -1,0 +1,267 @@
+{
+  "version": "1.0",
+  "purpose": "检索组件独立评测；不生成答案，不测试Text-to-Cypher统计，不加入重排",
+  "protocol": {
+    "candidate_limit": 20,
+    "top_k": 5,
+    "rrf_k": 60,
+    "modes": [
+      "vector",
+      "hybrid_candidates"
+    ],
+    "relevance_scale": {
+      "2": "满足本题全部语义要点且符合硬筛选",
+      "1": "只满足一部分语义要点，或相关但不足以支持完整解释",
+      "0": "不相关或违背要点/硬筛选"
+    },
+    "hard_filter_violations_are_zero": true,
+    "no_automatic_semantic_labels": true,
+    "no_gpu_required": true,
+    "five_semantic_acceptance": {
+      "question_ids": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05"
+      ],
+      "reasonable_min_fully_relevant_comments_in_top5": 2,
+      "pass_min_reasonable_questions": 3,
+      "requires_human_labels": true
+    }
+  },
+  "questions": [
+    {
+      "id": "R01",
+      "group": "semantic",
+      "query": "即使被困在囚笼里，也不能放弃希望和自由。",
+      "filters": {},
+      "criteria": [
+        "困境或束缚",
+        "仍坚持希望或自由"
+      ]
+    },
+    {
+      "id": "R02",
+      "group": "semantic",
+      "query": "生活再艰难，人也要想办法活下去。",
+      "filters": {},
+      "criteria": [
+        "生活艰难或苦难",
+        "仍然坚持生存"
+      ]
+    },
+    {
+      "id": "R03",
+      "group": "semantic",
+      "query": "结局没有圆满，却让人感觉像真实的人生。",
+      "filters": {},
+      "criteria": [
+        "结局不圆满",
+        "因此感到真实或像人生"
+      ]
+    },
+    {
+      "id": "R04",
+      "group": "semantic",
+      "query": "制度不公让普通人无处申诉。",
+      "filters": {},
+      "criteria": [
+        "制度或社会不公",
+        "普通人难以获得公正"
+      ]
+    },
+    {
+      "id": "R05",
+      "group": "semantic",
+      "query": "配乐一响，立刻回到了电影里的世界。",
+      "filters": {},
+      "criteria": [
+        "电影音乐或配乐",
+        "唤起场景或情绪体验"
+      ]
+    },
+    {
+      "id": "R06",
+      "group": "multi_condition",
+      "query": "剧情有点散，但演员的表演撑住了整部电影。",
+      "filters": {},
+      "criteria": [
+        "剧情散乱或薄弱",
+        "演员表演好并弥补剧情问题"
+      ]
+    },
+    {
+      "id": "R07",
+      "group": "multi_condition",
+      "query": "节奏拖沓，画面却漂亮得让人愿意看下去。",
+      "filters": {},
+      "criteria": [
+        "节奏拖沓或缓慢",
+        "认可画面视觉效果"
+      ]
+    },
+    {
+      "id": "R08",
+      "group": "multi_condition",
+      "query": "我承认这部电影有缺点，但还是愿意给它五星。",
+      "filters": {
+        "min_star": 5,
+        "max_star": 5
+      },
+      "criteria": [
+        "评论者自己承认电影缺点",
+        "仍作强烈正面推荐或愿给五星，不能只引用别人的差评"
+      ]
+    },
+    {
+      "id": "R09",
+      "group": "multi_condition",
+      "query": "表面上很好笑，笑完却觉得悲伤。",
+      "filters": {},
+      "criteria": [
+        "喜剧或让人发笑",
+        "同时感到悲伤或沉重"
+      ]
+    },
+    {
+      "id": "R10",
+      "group": "multi_condition",
+      "query": "女性角色有自己的选择，但仍受到男性或社会偏见限制。",
+      "filters": {},
+      "criteria": [
+        "女性角色自主选择",
+        "受到性别或社会限制"
+      ]
+    },
+    {
+      "id": "R11",
+      "group": "metadata",
+      "query": "肖申克让人觉得希望和自由比牢笼更强大。",
+      "filters": {
+        "movie": "肖申克"
+      },
+      "criteria": [
+        "希望或自由",
+        "明确来自肖申克电影评论"
+      ]
+    },
+    {
+      "id": "R12",
+      "group": "metadata",
+      "query": "肖申克看了很多次，仍然感动。",
+      "filters": {
+        "movie": "肖申克",
+        "min_star": 4,
+        "sentiment": "正面"
+      },
+      "criteria": [
+        "反复观看",
+        "仍然被打动或认可"
+      ]
+    },
+    {
+      "id": "R13",
+      "group": "metadata",
+      "query": "三块广告牌让人愤怒，但我仍然认可这部电影。",
+      "filters": {
+        "movie": "三块广告牌",
+        "sentiment": "正面",
+        "emotion": "愤怒"
+      },
+      "criteria": [
+        "文本涉及愤怒或不公",
+        "仍然认可电影，预测标签必须按元数据显示"
+      ]
+    },
+    {
+      "id": "R14",
+      "group": "metadata",
+      "query": "三块广告牌的评分与文字里的情绪看起来不一致。",
+      "filters": {
+        "movie": "三块广告牌",
+        "consistency": "矛盾"
+      },
+      "criteria": [
+        "星级与实际文字倾向的差异可以解释",
+        "不能把模型预测当人工真值"
+      ]
+    },
+    {
+      "id": "R15",
+      "group": "metadata",
+      "query": "青春的回忆很美，却也带着遗憾。",
+      "filters": {
+        "topic": "青春成长",
+        "date_from": "2017-01-01",
+        "date_to": "2018-12-31"
+      },
+      "criteria": [
+        "青春回忆",
+        "同时有美好与遗憾表达"
+      ]
+    },
+    {
+      "id": "R16",
+      "group": "topic_alias",
+      "query": "女性不该只是男性故事里的附属品。",
+      "filters": {
+        "topic": "性别议题"
+      },
+      "criteria": [
+        "讨论女性角色或处境",
+        "涉及主体性或男女权力关系"
+      ]
+    },
+    {
+      "id": "R17",
+      "group": "topic_alias",
+      "query": "音乐与画面一起把情绪推到了高潮。",
+      "filters": {
+        "topic": "音乐配乐"
+      },
+      "criteria": [
+        "明确谈论音乐配乐",
+        "与观影情绪或画面效果相关"
+      ]
+    },
+    {
+      "id": "R18",
+      "group": "topic_alias",
+      "query": "叙事结构很巧妙，最后的转折让前面的细节都有了意义。",
+      "filters": {
+        "topic": "剧情叙事"
+      },
+      "criteria": [
+        "叙事结构或细节",
+        "转折使前面内容得到新的解释"
+      ]
+    },
+    {
+      "id": "R19",
+      "group": "topic_alias",
+      "query": "笑点自然，没有为了搞笑而尴尬地凑梗。",
+      "filters": {
+        "topic": "喜剧娱乐"
+      },
+      "criteria": [
+        "评价笑点或幽默",
+        "认可自然不刻意的喜剧表达"
+      ]
+    },
+    {
+      "id": "R20",
+      "group": "topic_alias",
+      "query": "演员表演僵硬，让人无法相信这个角色。",
+      "filters": {
+        "topic": "演技评价",
+        "sentiment": "负面"
+      },
+      "criteria": [
+        "批评演员表演",
+        "因此影响角色可信度"
+      ]
+    }
+  ],
+  "publication_note": "Public questions are illustrative fixtures without answers, private review data, or author identities. Full frozen evaluation results are not distributed."
+}

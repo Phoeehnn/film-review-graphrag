@@ -1,0 +1,147 @@
+{
+  "version": "1.4.1",
+  "evaluation_method": "AI-assisted grading and human review/acceptance; not 518 independently human-graded answers",
+  "total_answers": 518,
+  "score_sources": {
+    "existing_human_preserved": 123,
+    "ai_accepted_at_signoff": 365,
+    "human_reviewed": 30
+  },
+  "human_sample_reviewed": 30,
+  "independent_human_accuracy": null,
+  "groups": [
+    {
+      "group": "agent/agent",
+      "count": 60,
+      "Y": 54,
+      "P": 0,
+      "N": 6,
+      "combined_strict_rate": 0.9,
+      "combined_effective_rate": 0.9
+    },
+    {
+      "group": "conversation/compact",
+      "count": 36,
+      "Y": 27,
+      "P": 3,
+      "N": 6,
+      "combined_strict_rate": 0.75,
+      "combined_effective_rate": 0.8333333333333334
+    },
+    {
+      "group": "conversation/full",
+      "count": 36,
+      "Y": 28,
+      "P": 2,
+      "N": 6,
+      "combined_strict_rate": 0.7777777777777778,
+      "combined_effective_rate": 0.8333333333333334
+    },
+    {
+      "group": "conversation/none",
+      "count": 36,
+      "Y": 1,
+      "P": 0,
+      "N": 35,
+      "combined_strict_rate": 0.027777777777777776,
+      "combined_effective_rate": 0.027777777777777776
+    },
+    {
+      "group": "long-conversation/compact",
+      "count": 14,
+      "Y": 8,
+      "P": 0,
+      "N": 6,
+      "combined_strict_rate": 0.5714285714285714,
+      "combined_effective_rate": 0.5714285714285714
+    },
+    {
+      "group": "long-conversation/full",
+      "count": 14,
+      "Y": 8,
+      "P": 0,
+      "N": 6,
+      "combined_strict_rate": 0.5714285714285714,
+      "combined_effective_rate": 0.5714285714285714
+    },
+    {
+      "group": "long-conversation/none",
+      "count": 14,
+      "Y": 0,
+      "P": 0,
+      "N": 14,
+      "combined_strict_rate": 0.0,
+      "combined_effective_rate": 0.0
+    },
+    {
+      "group": "qa/graph",
+      "count": 56,
+      "Y": 40,
+      "P": 8,
+      "N": 8,
+      "combined_strict_rate": 0.7142857142857143,
+      "combined_effective_rate": 0.8571428571428571
+    },
+    {
+      "group": "qa/hybrid",
+      "count": 56,
+      "Y": 45,
+      "P": 6,
+      "N": 5,
+      "combined_strict_rate": 0.8035714285714286,
+      "combined_effective_rate": 0.9107142857142857
+    },
+    {
+      "group": "qa/vector",
+      "count": 56,
+      "Y": 5,
+      "P": 11,
+      "N": 40,
+      "combined_strict_rate": 0.08928571428571429,
+      "combined_effective_rate": 0.2857142857142857
+    },
+    {
+      "group": "repair/0",
+      "count": 70,
+      "Y": 58,
+      "P": 4,
+      "N": 8,
+      "combined_strict_rate": 0.8285714285714286,
+      "combined_effective_rate": 0.8857142857142857
+    },
+    {
+      "group": "repair/2",
+      "count": 70,
+      "Y": 57,
+      "P": 5,
+      "N": 8,
+      "combined_strict_rate": 0.8142857142857143,
+      "combined_effective_rate": 0.8857142857142857
+    }
+  ],
+  "retrieval": {
+    "questions": 20,
+    "unique_query_comment_pairs": 132,
+    "result_positions": 200,
+    "grading_method": "Codex initial grading accepted as a batch by the user in chat; not independent per-item human grading",
+    "metrics": [
+      {
+        "mode": "vector",
+        "question_count": 20,
+        "fully_relevant_precision_at_5": 0.36,
+        "candidate_pool_ndcg_at_5": 0.8802607394676066
+      },
+      {
+        "mode": "hybrid_candidates",
+        "question_count": 20,
+        "fully_relevant_precision_at_5": 0.35,
+        "candidate_pool_ndcg_at_5": 0.8657539749340284
+      }
+    ]
+  },
+  "limitations": [
+    "No full-corpus relevant set: candidate-pool nDCG only, no corpus Recall.",
+    "No naturally triggered Cypher rewrites in the formal 1.4.1 run; no observed repair gain.",
+    "These figures are not a full 1.4.2 benchmark."
+  ]
+}

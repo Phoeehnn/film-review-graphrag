@@ -1,0 +1,629 @@
+{
+  "frozen_at": "2026-09-29",
+  "total_questions": 56,
+  "strategies": [
+    "graph",
+    "vector",
+    "hybrid"
+  ],
+  "total_real_queries": 168,
+  "questions": [
+    {
+      "id": 1,
+      "type": "基本查询",
+      "question": "肖申克的救赎评价怎么样？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 2,
+      "type": "基本查询",
+      "question": "哪些电影评分最高？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 3,
+      "type": "基本查询",
+      "question": "评论数量最多的电影是哪些？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 4,
+      "type": "基本查询",
+      "question": "三块广告牌有多少条评论？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 5,
+      "type": "基本查询",
+      "question": "乘风破浪的平均评分是多少？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 6,
+      "type": "基本查询",
+      "question": "平均点赞最高的电影有哪些？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 7,
+      "type": "基本查询",
+      "question": "数据库中一共有多少部电影？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 8,
+      "type": "基本查询",
+      "question": "X战警逆转未来的评论数量和评分？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 9,
+      "type": "基本查询",
+      "question": "一出好戏的基本信息？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 10,
+      "type": "基本查询",
+      "question": "哪些电影的评论数量超过1000条？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 11,
+      "type": "情感查询",
+      "question": "肖申克的正面评论占比多少？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 12,
+      "type": "情感查询",
+      "question": "哪些电影的负面评论最多？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 13,
+      "type": "情感查询",
+      "question": "战狼2的情绪分布是什么样的？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 14,
+      "type": "情感查询",
+      "question": "哪些电影的愤怒情绪占比最高？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 15,
+      "type": "情感查询",
+      "question": "感动情绪最多的电影有哪些？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 16,
+      "type": "情感查询",
+      "question": "大家看肖申克主要是什么情绪？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 17,
+      "type": "情感查询",
+      "question": "不同情绪的评论平均获赞多少？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 18,
+      "type": "情感查询",
+      "question": "西游记女儿国的负面情绪主要是哪些？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 19,
+      "type": "情感查询",
+      "question": "惊喜情绪最多的电影是哪些？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 20,
+      "type": "情感查询",
+      "question": "一出好戏的正面率和负面率分别是多少？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 21,
+      "type": "主题查询",
+      "question": "肖申克的观众主要讨论哪些话题？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 22,
+      "type": "主题查询",
+      "question": "关于战争主题哪些电影好评最多？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 23,
+      "type": "主题查询",
+      "question": "哪些电影在喜剧主题下评价最好？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 24,
+      "type": "主题查询",
+      "question": "性别议题讨论最多的电影有哪些？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 25,
+      "type": "主题查询",
+      "question": "音乐相关主题下哪些电影最受欢迎？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 26,
+      "type": "主题查询",
+      "question": "三块广告牌在哪些主题下争议最大？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 27,
+      "type": "主题查询",
+      "question": "评论中讨论导演最多的电影是哪些？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 28,
+      "type": "主题查询",
+      "question": "青春相关主题的评论集中在哪些电影？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 29,
+      "type": "主题查询",
+      "question": "知识图谱中一共有多少个主题？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 30,
+      "type": "主题查询",
+      "question": "每个主题分别有多少条评论？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 31,
+      "type": "双层分析",
+      "question": "有哪些矛盾情感的评论？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 32,
+      "type": "双层分析",
+      "question": "双层一致性的统计结果是什么？一致、矛盾、可接受各占多少？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 33,
+      "type": "双层分析",
+      "question": "哪些电影中性评分里隐藏着愤怒？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 34,
+      "type": "双层分析",
+      "question": "评分是5星但BERT判断为负面情绪的评论有哪些？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 35,
+      "type": "双层分析",
+      "question": "矛盾评论中点赞最高的有哪些？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 36,
+      "type": "双层分析",
+      "question": "哪些电影的隐性负面率最高？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 37,
+      "type": "双层分析",
+      "question": "肖申克的矛盾评论占比是多少？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 38,
+      "type": "双层分析",
+      "question": "三块广告牌的一致性比例是多少？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 39,
+      "type": "双层分析",
+      "question": "低评分但情绪是喜爱的评论有哪些？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 40,
+      "type": "双层分析",
+      "question": "哪些电影的矛盾率最高？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 41,
+      "type": "复杂查询",
+      "question": "谁是最有影响力的评论用户？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 42,
+      "type": "复杂查询",
+      "question": "获赞超过1000的高赞评论有哪些？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 43,
+      "type": "复杂查询",
+      "question": "找一下和肖申克相似的电影",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 44,
+      "type": "复杂查询",
+      "question": "帮我对比肖申克和大圣归来的情绪指纹",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 45,
+      "type": "复杂查询",
+      "question": "战争题材电影的感动率和愤怒率对比",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 46,
+      "type": "复杂查询",
+      "question": "爱情题材电影中哪些的正面率最高？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 47,
+      "type": "复杂查询",
+      "question": "点赞最多的评论分别属于哪些主题？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 48,
+      "type": "复杂查询",
+      "question": "评论数量最多的用户是谁？发了多少条评论？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 49,
+      "type": "复杂查询",
+      "question": "三块广告牌按月份的正面率变化趋势",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 50,
+      "type": "复杂查询",
+      "question": "肖申克点赞最高的10条评论是什么？",
+      "suite": "original_50",
+      "rubric": {
+        "Y": "Complete and accurate answer supported by sample evidence and real citations. All requested statistics must come from aggregate queries.",
+        "P": "Partly correct or explicitly acknowledges missing evidence, with some useful supported answer.",
+        "N": "Wrong or unsupported claim, wrong scope, runtime error, timeout, or no useful answer."
+      }
+    },
+    {
+      "id": 51,
+      "type": "semantic",
+      "question": "找几条表达“即使身处囚笼，也不放弃希望和自由”这种感受的影评。",
+      "suite": "supplementary_6",
+      "rubric": {
+        "Y": "At least two returned comments express hope or freedom under adversity. Quote actual comment IDs; do not claim corpus-wide prevalence.",
+        "P": "Satisfies only the statistics part or semantic part, or has one useful relevant comment with honest limitations.",
+        "N": "Wrong statistics, unsupported explanation, irrelevant evidence, runtime error, or timeout."
+      }
+    },
+    {
+      "id": 52,
+      "type": "semantic",
+      "question": "找表达“剧情有点散，但演员的表演撑住了整部电影”这种相同意思的评论。",
+      "suite": "supplementary_6",
+      "rubric": {
+        "Y": "At least two comments mention weak/disjointed plot and good acting together. Real IDs and faithful explanation; a generic acting-only comment is partial.",
+        "P": "Satisfies only the statistics part or semantic part, or has one useful relevant comment with honest limitations.",
+        "N": "Wrong statistics, unsupported explanation, irrelevant evidence, runtime error, or timeout."
+      }
+    },
+    {
+      "id": 53,
+      "type": "semantic",
+      "question": "找几条说法相似的评论：“明知这部片子有缺点，我还是愿意给它五星”。",
+      "suite": "supplementary_6",
+      "rubric": {
+        "Y": "At least two comments combine flaws/criticism with five-star or strong endorsement. Real IDs; do not treat predicted emotion as human judgment.",
+        "P": "Satisfies only the statistics part or semantic part, or has one useful relevant comment with honest limitations.",
+        "N": "Wrong statistics, unsupported explanation, irrelevant evidence, runtime error, or timeout."
+      }
+    },
+    {
+      "id": 54,
+      "type": "mixed",
+      "question": "肖申克的救赎的正面评论占比和情绪分布是怎样的？结合至少两条评论解释观众为什么喜欢它。",
+      "suite": "supplementary_6",
+      "rubric": {
+        "Y": "Exact sample positive ratio with denominator, predicted emotion distribution, and at least two relevant cited comments explaining liking. Statistics must not be computed from retrieved top-k.",
+        "P": "Satisfies only the statistics part or semantic part, or has one useful relevant comment with honest limitations.",
+        "N": "Wrong statistics, unsupported explanation, irrelevant evidence, runtime error, or timeout."
+      }
+    },
+    {
+      "id": 55,
+      "type": "mixed",
+      "question": "三块广告牌的矛盾评论占比是多少？结合至少两条评论解释评分与预测情绪可能不一致的原因。",
+      "suite": "supplementary_6",
+      "rubric": {
+        "Y": "Exact movie sample contradiction ratio and at least two relevant comments. Explain star/emotion disagreement without claiming weak-supervised emotion is ground truth.",
+        "P": "Satisfies only the statistics part or semantic part, or has one useful relevant comment with honest limitations.",
+        "N": "Wrong statistics, unsupported explanation, irrelevant evidence, runtime error, or timeout."
+      }
+    },
+    {
+      "id": 56,
+      "type": "mixed",
+      "question": "正面评论数最多的电影是哪部，有多少条？结合该电影的至少两条代表评论说明好评原因。",
+      "suite": "supplementary_6",
+      "rubric": {
+        "Y": "Correct corpus sample positive-comment leader and count, and at least two comments from that exact movie. Do not substitute highest positive ratio or overall rating.",
+        "P": "Satisfies only the statistics part or semantic part, or has one useful relevant comment with honest limitations.",
+        "N": "Wrong statistics, unsupported explanation, irrelevant evidence, runtime error, or timeout."
+      }
+    }
+  ],
+  "publication_note": "Public questions are illustrative fixtures without answers, private review data, or author identities. Full frozen evaluation results are not distributed."
+}

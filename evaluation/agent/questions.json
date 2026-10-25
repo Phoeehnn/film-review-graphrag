@@ -1,0 +1,217 @@
+{
+  "version": "2026-09-30",
+  "purpose": "独立评测六个工具的选择与调用稳定性；题目在运行前固定，预期工具由项目开发者制定，尚未经独立人工复核。",
+  "repetitions": 3,
+  "tool_score_rule": "全部 required 工具至少成功调用一次，不出现 allowed 以外工具或任一工具错误；这只衡量工具轨迹，不等于最终答案正确。",
+  "questions": [
+    {
+      "id": "A01",
+      "question": "肖申克的救赎的样本评论数、平均星级和平均点赞是多少？",
+      "required": [
+        "get_movie_overview"
+      ],
+      "allowed": [
+        "get_movie_overview"
+      ]
+    },
+    {
+      "id": "A02",
+      "question": "三块广告牌的平均星级和样本评论数是多少？",
+      "required": [
+        "get_movie_overview"
+      ],
+      "allowed": [
+        "get_movie_overview"
+      ]
+    },
+    {
+      "id": "A03",
+      "question": "倚天屠龙记在这个样本里的基本信息是什么？",
+      "required": [
+        "get_movie_overview"
+      ],
+      "allowed": [
+        "get_movie_overview"
+      ]
+    },
+    {
+      "id": "A04",
+      "question": "七宗罪的平均点赞与平均星级各是多少？",
+      "required": [
+        "get_movie_overview"
+      ],
+      "allowed": [
+        "get_movie_overview"
+      ]
+    },
+    {
+      "id": "A05",
+      "question": "查询肖申克的救赎七种预测情绪各有多少条。",
+      "required": [
+        "get_movie_emotions"
+      ],
+      "allowed": [
+        "get_movie_emotions"
+      ]
+    },
+    {
+      "id": "A06",
+      "question": "三块广告牌的预测情绪分布是什么？",
+      "required": [
+        "get_movie_emotions"
+      ],
+      "allowed": [
+        "get_movie_emotions"
+      ]
+    },
+    {
+      "id": "A07",
+      "question": "倚天屠龙记中预测为愤怒的评论有多少？",
+      "required": [
+        "get_movie_emotions"
+      ],
+      "allowed": [
+        "get_movie_emotions"
+      ]
+    },
+    {
+      "id": "A08",
+      "question": "七宗罪里哪些预测情绪的评论最多？",
+      "required": [
+        "get_movie_emotions"
+      ],
+      "allowed": [
+        "get_movie_emotions"
+      ]
+    },
+    {
+      "id": "A09",
+      "question": "列出全部18个评论主题及编号。",
+      "required": [
+        "list_topics"
+      ],
+      "allowed": [
+        "list_topics"
+      ]
+    },
+    {
+      "id": "A10",
+      "question": "我想了解图谱里的主题编号、显示名和含义，请先列主题目录。",
+      "required": [
+        "list_topics"
+      ],
+      "allowed": [
+        "list_topics"
+      ]
+    },
+    {
+      "id": "A11",
+      "question": "性别议题这一评论主题下，哪些电影的样本讨论最多？",
+      "required": [
+        "list_topics",
+        "search_movies_by_topic"
+      ],
+      "allowed": [
+        "list_topics",
+        "search_movies_by_topic"
+      ]
+    },
+    {
+      "id": "A12",
+      "question": "战争与反战主题下讨论最多的电影有哪些？",
+      "required": [
+        "list_topics",
+        "search_movies_by_topic"
+      ],
+      "allowed": [
+        "list_topics",
+        "search_movies_by_topic"
+      ]
+    },
+    {
+      "id": "A13",
+      "question": "音乐配乐主题主要出现在哪些电影中？",
+      "required": [
+        "list_topics",
+        "search_movies_by_topic"
+      ],
+      "allowed": [
+        "list_topics",
+        "search_movies_by_topic"
+      ]
+    },
+    {
+      "id": "A14",
+      "question": "青春成长主题下样本评论最多的五部电影是什么？",
+      "required": [
+        "list_topics",
+        "search_movies_by_topic"
+      ],
+      "allowed": [
+        "list_topics",
+        "search_movies_by_topic"
+      ]
+    },
+    {
+      "id": "A15",
+      "question": "只看评论数至少500条的电影，按平均星级列前五名。",
+      "required": [
+        "get_top_movies_by_rating"
+      ],
+      "allowed": [
+        "get_top_movies_by_rating"
+      ]
+    },
+    {
+      "id": "A16",
+      "question": "评论样本至少300条时，平均星级最高的三部电影是什么？",
+      "required": [
+        "get_top_movies_by_rating"
+      ],
+      "allowed": [
+        "get_top_movies_by_rating"
+      ]
+    },
+    {
+      "id": "A17",
+      "question": "找三条表达困境里仍坚持希望和自由的评论，并给真实评论ID。",
+      "required": [
+        "search_comments"
+      ],
+      "allowed": [
+        "search_comments"
+      ]
+    },
+    {
+      "id": "A18",
+      "question": "找两条同时批评剧情拖沓、又认可演员表现的影评。",
+      "required": [
+        "search_comments"
+      ],
+      "allowed": [
+        "search_comments"
+      ]
+    },
+    {
+      "id": "A19",
+      "question": "有没有评论说过配乐很动人、听完久久忘不了？找三条。",
+      "required": [
+        "search_comments"
+      ],
+      "allowed": [
+        "search_comments"
+      ]
+    },
+    {
+      "id": "A20",
+      "question": "检索两条关于女性自主和性别偏见的评论，只给真实评论证据。",
+      "required": [
+        "search_comments"
+      ],
+      "allowed": [
+        "search_comments"
+      ]
+    }
+  ],
+  "publication_note": "Public questions are illustrative fixtures without answers, private review data, or author identities. Full frozen evaluation results are not distributed."
+}
