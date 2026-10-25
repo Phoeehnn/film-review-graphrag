@@ -124,7 +124,7 @@
     ".dockerignore": "ab47e9b7bcd1c0f6fab8baa062e4bcea88134e18c87de2ac598e4c3b567cb95a",
     ".env.example": "682d9a69b4bc4c63f78f406fbd7f112b55636118fed41ce08e9879f1100df81b",
     ".gitattributes": "e5cc272601313ea2acd74903e6ae6def3bd48e97d4ba0c6b27e11ce95a2773fc",
-    ".github/workflows/tests.yml": "973649e9171b49b0e44525189156574d53ec0c9bc7b4e1734ecfab81c111e961",
+    ".github/workflows/tests.yml": "57ea3e52988d5f24bedd32c8edcff4d69e655f23b6186eeb922767c57f37f931",
     ".gitignore": "ac3e31776b5942770bbe8dac3af9d024369ecbe1ff55f323d991c9a322de03c5",
     ".streamlit/config.toml": "bf53dd31d22d48059b1788d7263699485d6612252c2affbe63dc3d0b076313c6",
     "Dockerfile": "15c842a42ae22560f223ff3d473bfe61e680fc31b6d59ceed95a8d4302fc956b",
