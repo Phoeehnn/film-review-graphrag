@@ -1,6 +1,6 @@
 {
   "version": "1.4.1",
-  "evaluation_method": "AI-assisted grading and human review/acceptance; not 518 independently human-graded answers",
+  "evaluation_method": "AI-assisted initial grading (DeepSeek batch grading plus targeted coding-assistant review), author review and final acceptance; not 518 independently human-graded answers",
   "total_answers": 518,
   "score_sources": {
     "existing_human_preserved": 123,
@@ -123,7 +123,7 @@
     "questions": 20,
     "unique_query_comment_pairs": 132,
     "result_positions": 200,
-    "grading_method": "Codex initial grading accepted as a batch by the user in chat; not independent per-item human grading",
+    "grading_method": "Coding-assistant initial relevance grading, accepted as a batch by the author; not independent per-item human grading",
     "metrics": [
       {
         "mode": "vector",
@@ -143,5 +143,11 @@
     "No full-corpus relevant set: candidate-pool nDCG only, no corpus Recall.",
     "No naturally triggered Cypher rewrites in the formal 1.4.1 run; no observed repair gain.",
     "These figures are not a full 1.4.2 benchmark."
-  ]
+  ],
+  "agent_reliability": {
+    "questions": 20,
+    "all_three_successful": 18,
+    "rate": 0.9,
+    "method": "fraction of 20 questions with all 3 saved final task grades Y; combined review provenance"
+  }
 }

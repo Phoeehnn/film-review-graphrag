@@ -118,7 +118,7 @@ def build_dataset():
               'selection': '168 QA + 60 Agent + 140 repair 0/2 + 108 short followups + 42 long followups',
               'queue_rules': 'all medium/low, needs_human, P, judge/assistant disagreements, known ambiguous cases, and fixed blind sample; never overwrite human files',
               'judge_model': Settings().deepseek_model, 'temperature': 0, 'max_tokens': 1100,
-              'provider_note': 'DeepSeek same-provider advisory judge, then Codex targeted audit; neither is a human score',
+              'provider_note': 'DeepSeek same-provider advisory judge, then targeted coding-assistant audit; neither is an independent human score',
               'code_sha256': file_hash(Path(__file__))}
     return records, config
 
@@ -234,7 +234,7 @@ def summarize(out=OUT):
             queue.append('序号与真实作者引用需核对')
         audit = overrides.get(record['key'], {})
         if audit.get('needs_human'):
-            queue.append('Codex复查需最终裁定')
+            queue.append('代码助手复查需最终裁定')
         if audit.get('grade') and audit['grade'] != assessment.get('grade'):
             queue.append('两次AI判断有分歧')
         labels.append({'key': record['key'], 'kind': record['kind'], 'mode': record['mode'],
@@ -255,7 +255,7 @@ def summarize(out=OUT):
                'usage': dict(usage), 'by_group': {f'{kind}/{mode}': dict(Counter(r['ai_grade'] or 'pending' for r in labels if r['kind'] == kind and r['mode'] == mode)) for kind, mode in sorted({(r['kind'], r['mode']) for r in labels})}}
     (out / 'summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')
     lines = ['# AI辅助初评 · 待人工最终复核', '', f"已初评 {summary['ai_scored']}/518；待复核/抽查 {summary['needs_human']} 项（其中预先分层抽查 {summary['blind_sample']}）。", '',
-             '评分来源：项目配置的DeepSeek批量初评，Codex定向复查；全部属于AI判断。人工评分未完成，不能作为逐题人工准确率。原人工标签保持原样。', '',
+             '评分来源：DeepSeek批量初评，加代码助手定向复查；全部属于AI判断。作者复核尚未完成，不能作为逐题人工准确率。原人工标签保持原样。', '',
              '打开辅助复核页面可按疑难/抽查筛选，逐项确认或修改分数；原答案、完整证据、参考事实和历史均可展开。', '',
              '## 分组AI建议分布（不是人工准确率）', '', '|组别|Y|P|N|未评|', '|---|---:|---:|---:|---:|']
     for group, counts in summary['by_group'].items():

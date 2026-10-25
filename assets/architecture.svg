@@ -1,1 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="920" height="720" viewBox="0 0 920 720"><defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#4a8179"/></marker></defs><rect width="920" height="720" rx="18" fill="#eef4f4"/><g font-family="Arial,sans-serif"><path d="M285 115H320" fill="none" stroke="#4a8179" stroke-width="2" marker-end="url(#a)"/><path d="M570 115H605" fill="none" stroke="#4a8179" stroke-width="2" marker-end="url(#a)"/><path d="M730 160V200H435V245" fill="none" stroke="#4a8179" stroke-width="2" marker-end="url(#a)"/><path d="M730 200H745V245" fill="none" stroke="#4a8179" stroke-width="2" marker-end="url(#a)"/><path d="M435 335V375H590V420" fill="none" stroke="#4a8179" stroke-width="2" marker-end="url(#a)"/><path d="M745 335V375H590" fill="none" stroke="#4a8179" stroke-width="2" marker-end="url(#a)"/><path d="M590 510V580" fill="none" stroke="#4a8179" stroke-width="2" marker-end="url(#a)"/><rect x="35" y="70" width="250" height="90" rx="12" fill="#fff" stroke="#9eb7ba"/><text x="160" y="106" text-anchor="middle" font-size="21" font-weight="600" fill="#17353d">Browser UI</text><text x="160" y="134" text-anchor="middle" font-size="14" fill="#536e73">Question / Agent / evidence</text><rect x="320" y="70" width="250" height="90" rx="12" fill="#fff" stroke="#9eb7ba"/><text x="445" y="106" text-anchor="middle" font-size="21" font-weight="600" fill="#17353d">FastAPI + SSE</text><text x="445" y="134" text-anchor="middle" font-size="14" fill="#536e73">Validation / deadlines</text><rect x="605" y="70" width="250" height="90" rx="12" fill="#fff" stroke="#9eb7ba"/><text x="730" y="106" text-anchor="middle" font-size="21" font-weight="600" fill="#17353d">Router + session</text><text x="730" y="134" text-anchor="middle" font-size="14" fill="#536e73">Rules / fixed filters</text><rect x="310" y="245" width="250" height="90" rx="12" fill="#fff" stroke="#9eb7ba"/><text x="435" y="281" text-anchor="middle" font-size="21" font-weight="600" fill="#17353d">Graph retrieval</text><text x="435" y="309" text-anchor="middle" font-size="14" fill="#536e73">Statistics / safe Cypher</text><rect x="620" y="245" width="250" height="90" rx="12" fill="#fff" stroke="#9eb7ba"/><text x="745" y="281" text-anchor="middle" font-size="21" font-weight="600" fill="#17353d">Vector retrieval</text><text x="745" y="309" text-anchor="middle" font-size="14" fill="#536e73">CPU SBERT / Neo4j</text><rect x="465" y="420" width="250" height="90" rx="12" fill="#fff" stroke="#9eb7ba"/><text x="590" y="456" text-anchor="middle" font-size="21" font-weight="600" fill="#17353d">Evidence + RRF</text><text x="590" y="484" text-anchor="middle" font-size="14" fill="#536e73">Statistics kept separate</text><rect x="465" y="580" width="250" height="90" rx="12" fill="#fff" stroke="#9eb7ba"/><text x="590" y="616" text-anchor="middle" font-size="21" font-weight="600" fill="#17353d">DeepSeek + citations</text><text x="590" y="644" text-anchor="middle" font-size="14" fill="#536e73">Evidence-grounded answer</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1100" viewBox="0 0 1440 1100" role="img" aria-labelledby="title desc">
+<title id="title">影评知图：直接问答与六工具 Agent</title><desc id="desc">直接问答经过会话层、规则路由到图谱或向量；Agent独立调用六个工具。统计与评论证据分开保留，再生成可追溯回答。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#618881"/></marker></defs>
+<rect width="1440" height="1100" rx="24" fill="#f1f6f5"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif">
+<text x="60" y="55" font-size="27" font-weight="700" fill="#173c40">影评知图 · 从问题到可追溯证据</text>
+<text x="60" y="85" font-size="16" fill="#637b7c">直接问答与 Agent 两条入口，共享图谱、语义检索与证据基础设施</text>
+<rect x="430" y="120" width="580" height="100" rx="15" fill="#e3f0ec" stroke="#bdd1ce" stroke-width="1.5"/>
+<text x="452" y="154" font-size="21" font-weight="700" fill="#163e40">Streamlit → FastAPI / SSE</text>
+<text x="452" y="184" font-size="16" fill="#4a6769">校验请求、时间预算、引用与真实生成片段</text>
+<rect x="60" y="285" width="660" height="125" rx="15" fill="#ffffff" stroke="#bdd1ce" stroke-width="1.5"/>
+<text x="82" y="319" font-size="21" font-weight="700" fill="#163e40">直接问答 · 会话层</text>
+<text x="82" y="349" font-size="16" fill="#4a6769">固定条件 / 撤销 / 证据序号映射</text>
+<text x="82" y="375" font-size="16" fill="#4a6769">最近对话与滚动摘要分开管理；摘要不能覆盖固定条件</text>
+<rect x="800" y="285" width="580" height="125" rx="15" fill="#ffffff" stroke="#bdd1ce" stroke-width="1.5"/>
+<text x="822" y="319" font-size="21" font-weight="700" fill="#163e40">Agent · 工具调用循环</text>
+<text x="822" y="349" font-size="16" fill="#4a6769">最近六轮对话；Pydantic 参数校验</text>
+<text x="822" y="375" font-size="16" fill="#4a6769">最多五轮模型调用 / 十次工具执行；保留调用轨迹</text>
+<rect x="60" y="455" width="660" height="95" rx="15" fill="#ffffff" stroke="#bdd1ce" stroke-width="1.5"/>
+<text x="82" y="489" font-size="21" font-weight="700" fill="#163e40">可解释规则路由</text>
+<text x="82" y="519" font-size="16" fill="#4a6769">统计 → graph；相近表达 → vector；其余 → hybrid</text>
+<rect x="800" y="455" width="580" height="215" rx="15" fill="#e8f1ed" stroke="#bdd1ce" stroke-width="1.5"/>
+<text x="822" y="489" font-size="21" font-weight="700" fill="#163e40">六个可复用工具 · MCP 适配</text>
+<text x="822" y="519" font-size="16" fill="#4a6769">get_movie_overview · get_movie_emotions</text>
+<text x="822" y="545" font-size="16" fill="#4a6769">list_topics · search_movies_by_topic</text>
+<text x="822" y="571" font-size="16" fill="#4a6769">get_top_movies_by_rating · search_comments</text>
+<text x="822" y="597" font-size="16" fill="#4a6769">概览 / 情绪 / 主题 / 排名 / 语义评论</text>
+<rect x="60" y="610" width="385" height="160" rx="15" fill="#ffffff" stroke="#bdd1ce" stroke-width="1.5"/>
+<text x="82" y="644" font-size="21" font-weight="700" fill="#163e40">图谱检索 · Neo4j</text>
+<text x="82" y="674" font-size="16" fill="#4a6769">统计 / Text-to-Cypher</text>
+<text x="82" y="700" font-size="16" fill="#4a6769">安全检查 → EXPLAIN</text>
+<text x="82" y="726" font-size="16" fill="#4a6769">失败时最多重写 2 次，每次重新检查</text>
+<text x="82" y="752" font-size="16" fill="#4a6769">只读 / 超时 / 结果上限</text>
+<rect x="485" y="610" width="280" height="160" rx="15" fill="#ffffff" stroke="#bdd1ce" stroke-width="1.5"/>
+<text x="507" y="644" font-size="21" font-weight="700" fill="#163e40">向量检索 · Neo4j</text>
+<text x="507" y="674" font-size="16" fill="#4a6769">CPU SBERT · 384 维</text>
+<text x="507" y="700" font-size="16" fill="#4a6769">原生余弦索引 / 条件筛选</text>
+<text x="507" y="726" font-size="16" fill="#4a6769">返回真实评论证据</text>
+<rect x="800" y="720" width="580" height="105" rx="15" fill="#e8f1ed" stroke="#bdd1ce" stroke-width="1.5"/>
+<text x="822" y="754" font-size="21" font-weight="700" fill="#163e40">共享检索与数据工具</text>
+<text x="822" y="784" font-size="16" fill="#4a6769">六工具复用图谱统计与评论检索</text>
+<text x="822" y="810" font-size="16" fill="#4a6769">工具结果回传 Agent，由模型选择下一步</text>
+<rect x="60" y="850" width="705" height="100" rx="15" fill="#e3f0ec" stroke="#bdd1ce" stroke-width="1.5"/>
+<text x="82" y="884" font-size="21" font-weight="700" fill="#163e40">证据汇合</text>
+<text x="82" y="914" font-size="16" fill="#4a6769">统计行单独保留；评论按 ID 去重并做 RRF 融合</text>
+<text x="82" y="940" font-size="16" fill="#4a6769">graph / vector 强制模式只走所选路径</text>
+<rect x="430" y="995" width="750" height="75" rx="15" fill="#183f43" stroke="#183f43" stroke-width="1.5"/>
+<text x="452" y="1029" font-size="21" font-weight="700" fill="#ffffff">DeepSeek 回答 + 证据 ID + Cypher / 真实子图</text>
+<path d="M580 220V250H390V285" fill="none" stroke="#618881" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="300" y="250" font-size="15" fill="#426f68">直接问答</text>
+<path d="M860 220V250H1090V285" fill="none" stroke="#618881" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1120" y="250" font-size="15" fill="#426f68">Agent</text>
+<path d="M390 410V455" fill="none" stroke="#618881" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1090 410V455" fill="none" stroke="#618881" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M250 550V610" fill="none" stroke="#618881" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="90" y="587" font-size="15" fill="#426f68">graph / hybrid</text>
+<path d="M625 550V610" fill="none" stroke="#618881" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="490" y="587" font-size="15" fill="#426f68">vector / hybrid</text>
+<path d="M1090 670V720" fill="none" stroke="#618881" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M800 790H780V590H700V610" fill="none" stroke="#618881" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M780 590H445V610" fill="none" stroke="#618881" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M250 770V850" fill="none" stroke="#618881" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M625 770V850" fill="none" stroke="#618881" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M410 950V975H610V995" fill="none" stroke="#618881" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1090 825V995" fill="none" stroke="#618881" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1110" y="915" font-size="15" fill="#426f68">Agent 工具证据与答案</text>
+<text x="65" y="1030" font-size="15" fill="#637b7c">历史分层样本 · 预测情绪标签</text><text x="65" y="1058" font-size="15" fill="#637b7c">统计范围不等于全站总体</text></g></svg>

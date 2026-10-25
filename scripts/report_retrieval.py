@@ -114,7 +114,7 @@ def summarize(run):
     if summary_data['human_complete']:
         title='# 独立检索组件基线（人工复核完成）'
         batch_confirmed=any(row.get('confirmation_source')=='user_chat_batch_acceptance' for row in labels)
-        provenance=('评分由Codex/Sol提供，用户于2026年10月19日在聊天中确认整批接受，按AI辅助、人工确认口径报告；不是132项独立逐条人工评分，也未记录为网页逐项签认。' if batch_confirmed else '相关性分数已由评分人保存确认；若使用AI辅助，须保留对应评分来源。')
+        provenance=('相关性评分由代码助手初评，作者整批确认；按AI辅助、人工确认口径报告，不是132项独立逐条人工评分。' if batch_confirmed else '相关性分数已由评分人保存确认；若使用AI辅助，须保留对应评分来源。')
     elif summary_data['has_ai_pending']:
         title='# 独立检索组件基线（AI初评，待人工复核）'
         provenance='当前P@5/nDCG为AI建议分计算的预览值，不能表述为人工结果；逐题确认后报告会更新。'
@@ -131,7 +131,7 @@ def summarize(run):
         n='暂无完整评分' if row['candidate_pool_ndcg_at_5'] is None else f"{row['candidate_pool_ndcg_at_5']:.3f}"
         lines.append(f"| {row['mode']} | {row['scored_positions']}/{row['returned_positions']} | {row['human_scored']}/{row['returned_positions']} | {row['review_state']} | {p} | {n} | {row['facet_violation_positions']} | {row['empty_questions']} | {row['mean_vector_component_seconds']:.3f}/{row['mean_graph_candidate_seconds']:.3f} |")
     lines += [
-        '',f"去重题目/评论组合：{summary_data['unique_query_comment_pairs_to_review']}；200个候选位置各自保留来源，评分表区分网页保存和用户聊天整批确认。",'',
+        '',f"去重题目/评论组合：{summary_data['unique_query_comment_pairs_to_review']}；200个候选位置各自保留来源，评分表保留逐项保存与整批确认的来源区别。",'',
         '完全相关P@5只把2分计为相关；缺失位置计0。nDCG的理想排序由已返回候选构成，仅反映该候选集合的排序，不声称全库nDCG或Recall。','',
         '先看多条件语义的失误原因，再决定是否在相同候选和同一标签上进行CPU小模型重排对照。不得据时间、非空结果或词命中宣称重排提高了相关性。',
     ]
