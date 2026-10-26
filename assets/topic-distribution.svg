@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1200" height="860" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1200 860" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink"><title>18 个主题的样本内评论分布</title>
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1200" height="860"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-860)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1200" height="860" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<g transform="">
+				<path d="M 185,100 L 185,770 Z" style="stroke: rgb(91%,92%,96%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 380.744681,100 L 380.744681,770 Z" style="stroke: rgb(91%,92%,96%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 576.489362,100 L 576.489362,770 Z" style="stroke: rgb(91%,92%,96%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 772.234043,100 L 772.234043,770 Z" style="stroke: rgb(91%,92%,96%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 967.978723,100 L 967.978723,770 Z" style="stroke: rgb(91%,92%,96%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<g transform="">
+					<rect x="185.0" y="108.27160493827161" width="99.0859574468085" height="20.679012345679027" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,59%,83%); fill-rule: evenodd;"/>
+					<rect x="185.0" y="145.49382716049382" width="126.3727659574468" height="20.679012345679013" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,59%,83%); fill-rule: evenodd;"/>
+					<rect x="185.0" y="182.71604938271605" width="132.32340425531913" height="20.679012345679013" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,59%,83%); fill-rule: evenodd;"/>
+					<rect x="185.0" y="219.93827160493825" width="146.8085106382979" height="20.679012345679013" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,59%,83%); fill-rule: evenodd;"/>
+					<rect x="185.0" y="257.1604938271605" width="154.75574468085108" height="20.679012345678984" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,59%,83%); fill-rule: evenodd;"/>
+					<rect x="185.0" y="294.3827160493827" width="173.86042553191487" height="20.679012345678984" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,59%,83%); fill-rule: evenodd;"/>
+					<rect x="185.0" y="331.6049382716049" width="176.32680851063827" height="20.67901234567904" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,59%,83%); fill-rule: evenodd;"/>
+					<rect x="185.0" y="368.82716049382714" width="216.65021276595746" height="20.679012345678984" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,59%,83%); fill-rule: evenodd;"/>
+					<rect x="185.0" y="406.04938271604937" width="218.95999999999998" height="20.67901234567904" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,59%,83%); fill-rule: evenodd;"/>
+					<rect x="185.0" y="443.2716049382716" width="242.3710638297872" height="20.679012345678984" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,59%,83%); fill-rule: evenodd;"/>
+					<rect x="185.0" y="480.4938271604938" width="260.22297872340425" height="20.67901234567904" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,59%,83%); fill-rule: evenodd;"/>
+					<rect x="185.0" y="517.716049382716" width="264.80340425531915" height="20.679012345678984" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,59%,83%); fill-rule: evenodd;"/>
+					<rect x="185.0" y="554.9382716049382" width="278.58382978723404" height="20.679012345678984" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,59%,83%); fill-rule: evenodd;"/>
+					<rect x="185.0" y="592.1604938271605" width="361.931914893617" height="20.679012345678984" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,59%,83%); fill-rule: evenodd;"/>
+					<rect x="185.0" y="629.3827160493827" width="363.73276595744676" height="20.679012345678984" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,59%,83%); fill-rule: evenodd;"/>
+					<rect x="185.0" y="666.604938271605" width="365.5727659574468" height="20.679012345678984" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,59%,83%); fill-rule: evenodd;"/>
+					<rect x="185.0" y="703.8271604938271" width="467.4382978723404" height="20.679012345678984" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,59%,83%); fill-rule: evenodd;"/>
+					<rect x="185.0" y="741.0493827160493" width="792.6485106382978" height="20.679012345678984" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,59%,83%); fill-rule: evenodd;"/>
+					<g transform=""/>
+				</g>
+				<g transform="">
+					<g transform=""/>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,177,118.611111)">
+							<text x="-64.0" y="-6.4" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 16px;fill: rgb(32%,39%,50%); stroke:none;" transform="translate(0,-12) scale(1,-1)">音乐配乐</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,177,155.833333)">
+							<text x="-64.0" y="-6.4" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 16px;fill: rgb(32%,39%,50%); stroke:none;" transform="translate(0,-12) scale(1,-1)">导演创作</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,177,193.055556)">
+							<text x="-64.0" y="-6.4" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 16px;fill: rgb(32%,39%,50%); stroke:none;" transform="translate(0,-12) scale(1,-1)">综合评价</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,177,230.277778)">
+							<text x="-64.0" y="-6.4" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 16px;fill: rgb(32%,39%,50%); stroke:none;" transform="translate(0,-12) scale(1,-1)">粉丝文化</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,177,267.5)">
+							<text x="-64.0" y="-6.4" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 16px;fill: rgb(32%,39%,50%); stroke:none;" transform="translate(0,-12) scale(1,-1)">文化认同</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,177,304.722222)">
+							<text x="-64.0" y="-6.4" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 16px;fill: rgb(32%,39%,50%); stroke:none;" transform="translate(0,-12) scale(1,-1)">青春成长</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,177,341.944444)">
+							<text x="-64.0" y="-6.4" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 16px;fill: rgb(32%,39%,50%); stroke:none;" transform="translate(0,-12) scale(1,-1)">外貌追捧</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,177,379.166667)">
+							<text x="-64.0" y="-6.4" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 16px;fill: rgb(32%,39%,50%); stroke:none;" transform="translate(0,-12) scale(1,-1)">人生哲思</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,177,416.388889)">
+							<text x="-64.0" y="-6.4" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 16px;fill: rgb(32%,39%,50%); stroke:none;" transform="translate(0,-12) scale(1,-1)">低分差评</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,177,453.611111)">
+							<text x="-64.0" y="-6.4" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 16px;fill: rgb(32%,39%,50%); stroke:none;" transform="translate(0,-12) scale(1,-1)">性别议题</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,177,490.833333)">
+							<text x="-64.0" y="-6.4" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 16px;fill: rgb(32%,39%,50%); stroke:none;" transform="translate(0,-12) scale(1,-1)">系列续作</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,177,528.055556)">
+							<text x="-64.0" y="-6.4" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 16px;fill: rgb(32%,39%,50%); stroke:none;" transform="translate(0,-12) scale(1,-1)">喜剧娱乐</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,177,565.277778)">
+							<text x="-80.0" y="-6.4" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 16px;fill: rgb(32%,39%,50%); stroke:none;" transform="translate(0,-12) scale(1,-1)">战争与反战</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,177,602.5)">
+							<text x="-64.0" y="-6.4" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 16px;fill: rgb(32%,39%,50%); stroke:none;" transform="translate(0,-12) scale(1,-1)">剧情叙事</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,177,639.722222)">
+							<text x="-64.0" y="-6.4" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 16px;fill: rgb(32%,39%,50%); stroke:none;" transform="translate(0,-12) scale(1,-1)">演技评价</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,177,676.944444)">
+							<text x="-80.0" y="-6.4" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 16px;fill: rgb(32%,39%,50%); stroke:none;" transform="translate(0,-12) scale(1,-1)">女主角讨论</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,177,714.166667)">
+							<text x="-80.0" y="-6.4" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 16px;fill: rgb(32%,39%,50%); stroke:none;" transform="translate(0,-12) scale(1,-1)">评分与口碑</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,177,751.388889)">
+							<text x="-64.0" y="-6.4" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 16px;fill: rgb(32%,39%,50%); stroke:none;" transform="translate(0,-12) scale(1,-1)">综合好评</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 185,100 L 1105,100 Z" style="stroke: rgb(91%,92%,96%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,185,95)">
+							<text x="-3.25" y="-13.0" style="font-family: Times-Roman; font-size: 13px;fill: rgb(44%,50%,60%); stroke:none;" transform="translate(0,-26) scale(1,-1)">0</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,380.744681,95)">
+							<text x="-13.0" y="-13.0" style="font-family: Times-Roman; font-size: 13px;fill: rgb(44%,50%,60%); stroke:none;" transform="translate(0,-26) scale(1,-1)">5000</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,576.489362,95)">
+							<text x="-16.25" y="-13.0" style="font-family: Times-Roman; font-size: 13px;fill: rgb(44%,50%,60%); stroke:none;" transform="translate(0,-26) scale(1,-1)">10000</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,772.234043,95)">
+							<text x="-16.25" y="-13.0" style="font-family: Times-Roman; font-size: 13px;fill: rgb(44%,50%,60%); stroke:none;" transform="translate(0,-26) scale(1,-1)">15000</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,967.978723,95)">
+							<text x="-16.25" y="-13.0" style="font-family: Times-Roman; font-size: 13px;fill: rgb(44%,50%,60%); stroke:none;" transform="translate(0,-26) scale(1,-1)">20000</text>
+						</g>
+					</g>
+				</g>
+			</g>
+			<text x="294.0859574468085" y="113.61111111111111" style="font-family: Helvetica; font-size: 14px;fill: rgb(22%,30%,42%); stroke:none;" transform="translate(0,227) scale(1,-1)">2,531</text>
+			<text x="321.3727659574468" y="150.83333333333331" style="font-family: Helvetica; font-size: 14px;fill: rgb(22%,30%,42%); stroke:none;" transform="translate(0,301) scale(1,-1)">3,228</text>
+			<text x="327.32340425531913" y="188.05555555555554" style="font-family: Helvetica; font-size: 14px;fill: rgb(22%,30%,42%); stroke:none;" transform="translate(0,376) scale(1,-1)">3,380</text>
+			<text x="341.8085106382979" y="225.27777777777777" style="font-family: Helvetica; font-size: 14px;fill: rgb(22%,30%,42%); stroke:none;" transform="translate(0,450) scale(1,-1)">3,750</text>
+			<text x="349.7557446808511" y="262.5" style="font-family: Helvetica; font-size: 14px;fill: rgb(22%,30%,42%); stroke:none;" transform="translate(0,525) scale(1,-1)">3,953</text>
+			<text x="368.86042553191487" y="299.72222222222223" style="font-family: Helvetica; font-size: 14px;fill: rgb(22%,30%,42%); stroke:none;" transform="translate(0,599) scale(1,-1)">4,441</text>
+			<text x="371.32680851063833" y="336.94444444444446" style="font-family: Helvetica; font-size: 14px;fill: rgb(22%,30%,42%); stroke:none;" transform="translate(0,673) scale(1,-1)">4,504</text>
+			<text x="411.65021276595746" y="374.1666666666667" style="font-family: Helvetica; font-size: 14px;fill: rgb(22%,30%,42%); stroke:none;" transform="translate(0,748) scale(1,-1)">5,534</text>
+			<text x="413.96" y="411.38888888888886" style="font-family: Helvetica; font-size: 14px;fill: rgb(22%,30%,42%); stroke:none;" transform="translate(0,822) scale(1,-1)">5,593</text>
+			<text x="437.3710638297872" y="448.6111111111111" style="font-family: Helvetica; font-size: 14px;fill: rgb(22%,30%,42%); stroke:none;" transform="translate(0,897) scale(1,-1)">6,191</text>
+			<text x="455.22297872340425" y="485.8333333333333" style="font-family: Helvetica; font-size: 14px;fill: rgb(22%,30%,42%); stroke:none;" transform="translate(0,971) scale(1,-1)">6,647</text>
+			<text x="459.80340425531915" y="523.0555555555555" style="font-family: Helvetica; font-size: 14px;fill: rgb(22%,30%,42%); stroke:none;" transform="translate(0,1046) scale(1,-1)">6,764</text>
+			<text x="473.58382978723404" y="560.2777777777778" style="font-family: Helvetica; font-size: 14px;fill: rgb(22%,30%,42%); stroke:none;" transform="translate(0,1120) scale(1,-1)">7,116</text>
+			<text x="556.931914893617" y="597.5" style="font-family: Helvetica; font-size: 14px;fill: rgb(22%,30%,42%); stroke:none;" transform="translate(0,1195) scale(1,-1)">9,245</text>
+			<text x="558.7327659574469" y="634.7222222222222" style="font-family: Helvetica; font-size: 14px;fill: rgb(22%,30%,42%); stroke:none;" transform="translate(0,1269) scale(1,-1)">9,291</text>
+			<text x="560.5727659574468" y="671.9444444444445" style="font-family: Helvetica; font-size: 14px;fill: rgb(22%,30%,42%); stroke:none;" transform="translate(0,1343) scale(1,-1)">9,338</text>
+			<text x="662.4382978723404" y="709.1666666666666" style="font-family: Helvetica; font-size: 14px;fill: rgb(22%,30%,42%); stroke:none;" transform="translate(0,1418) scale(1,-1)">11,940</text>
+			<text x="987.6485106382979" y="746.3888888888889" style="font-family: Helvetica; font-size: 14px;fill: rgb(22%,30%,42%); stroke:none;" transform="translate(0,1492) scale(1,-1)">20,247</text>
+			<text x="45" y="815" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 25px;fill: rgb(11%,19%,34%); stroke:none;" transform="translate(0,1630) scale(1,-1)">18 个主题：把观众讨论组织成可查询的维度</text>
+			<text x="185" y="57" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 15px;fill: rgb(38%,44%,54%); stroke:none;" transform="translate(0,114) scale(1,-1)">样本内评论数量</text>
+			<text x="45" y="21" style="font-family: Microsoft YaHei,Arial,sans-serif; font-size: 14px;fill: rgb(44%,50%,60%); stroke:none;" transform="translate(0,42) scale(1,-1)">合计 123,693 条评论；主题名为聚类的人工概括，不等同于电影题材或情感标签。</text>
+		</g>
+	</g>
+</svg>

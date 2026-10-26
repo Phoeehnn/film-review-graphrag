@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="410" viewBox="0 0 1280 410" role="img" aria-labelledby="title">
+<title id="title">影评知图：知识图谱、混合检索与 Agent 问答服务</title>
+<defs><linearGradient id="bg" x2="1" y2=".7"><stop stop-color="#101b3d"/><stop offset="1" stop-color="#17304d"/></linearGradient><linearGradient id="a"><stop stop-color="#a5b4fc"/><stop offset="1" stop-color="#67e8f9"/></linearGradient></defs>
+<rect width="1280" height="410" rx="22" fill="url(#bg)"/>
+<g font-family="Microsoft YaHei,Arial,sans-serif"><text x="58" y="63" fill="#94a7cb" font-size="14" letter-spacing="3">FILM REVIEW GRAPHRAG</text>
+<text x="56" y="139" fill="white" font-size="54" font-weight="700">影评知图</text>
+<text x="59" y="188" fill="#d6e3f4" font-size="24">从海量影评，到有据可查的答案。</text>
+<text x="60" y="229" fill="#9fb4d0" font-size="16">双层情感 · 主题发现 · 知识图谱 · Agent 问答</text>
+<g stroke="#78a4d4" stroke-width="1.5" fill="none" opacity=".5"><path d="M960 69L1065 125L1140 65M960 69L910 175L1065 125L1110 220L1190 161M910 175L1000 240L1110 220M1065 125L1190 161"/></g>
+<g fill="#65d9e7"><circle cx="960" cy="69" r="10"/><circle cx="1140" cy="65" r="8"/><circle cx="910" cy="175" r="9"/><circle cx="1000" cy="240" r="8"/><circle cx="1190" cy="161" r="10"/></g>
+<circle cx="1065" cy="125" r="27" fill="#7687f5"/><circle cx="1110" cy="220" r="17" fill="#a5b4fc"/>
+<rect x="58" y="282" width="263" height="90" rx="12" fill="#ffffff" fill-opacity=".055" stroke="#ffffff" stroke-opacity=".12"/><text x="77" y="322" font-size="30" font-weight="700" fill="url(#a)">123,693</text><text x="77" y="349" font-size="14" fill="#a8bad5">条影评样本</text><rect x="359" y="282" width="263" height="90" rx="12" fill="#ffffff" fill-opacity=".055" stroke="#ffffff" stroke-opacity=".12"/><text x="378" y="322" font-size="30" font-weight="700" fill="url(#a)">156</text><text x="378" y="349" font-size="14" fill="#a8bad5">部电影</text><rect x="660" y="282" width="263" height="90" rx="12" fill="#ffffff" fill-opacity=".055" stroke="#ffffff" stroke-opacity=".12"/><text x="679" y="322" font-size="30" font-weight="700" fill="url(#a)">18</text><text x="679" y="349" font-size="14" fill="#a8bad5">个评论主题</text><rect x="961" y="282" width="263" height="90" rx="12" fill="#ffffff" fill-opacity=".055" stroke="#ffffff" stroke-opacity=".12"/><text x="980" y="322" font-size="30" font-weight="700" fill="url(#a)">384</text><text x="980" y="349" font-size="14" fill="#a8bad5">维语义向量</text></g></svg>

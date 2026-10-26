@@ -1,0 +1,135 @@
+{
+  "dataset": {
+    "comments": 123693,
+    "movies": 156,
+    "topics": 18,
+    "embedding_dimensions": 384,
+    "nodes": 176650,
+    "relationships": 618436
+  },
+  "node_counts": {
+    "Movie": 156,
+    "Comment": 123693,
+    "Topic": 18,
+    "Sentiment": 3,
+    "Emotion": 7,
+    "User": 52773
+  },
+  "modeling": {
+    "encoder": "paraphrase-multilingual-MiniLM-L12-v2",
+    "zero_shot_model": "mDeBERTa-v3-base-mnli-xnli",
+    "pseudo_labeled_examples": 10000,
+    "emotion_features": 386,
+    "emotion_classes": 7,
+    "rating_sentiment_classes": 3,
+    "weak_supervision_expander": "LightGBM",
+    "topic_model": "BERTopic",
+    "topic_pipeline": [
+      "UMAP",
+      "HDBSCAN",
+      "keyword representation",
+      "embedding-based reassignment",
+      "manual consolidation and naming"
+    ],
+    "final_topic_count": 18
+  },
+  "topics": [
+    {
+      "topic_id": "t_0",
+      "display_name": "演技评价",
+      "comment_count": 9291
+    },
+    {
+      "topic_id": "t_1",
+      "display_name": "青春成长",
+      "comment_count": 4441
+    },
+    {
+      "topic_id": "t_2",
+      "display_name": "女主角讨论",
+      "comment_count": 9338
+    },
+    {
+      "topic_id": "t_3",
+      "display_name": "文化认同",
+      "comment_count": 3953
+    },
+    {
+      "topic_id": "t_4",
+      "display_name": "低分差评",
+      "comment_count": 5593
+    },
+    {
+      "topic_id": "t_5",
+      "display_name": "综合好评",
+      "comment_count": 20247
+    },
+    {
+      "topic_id": "t_6",
+      "display_name": "性别议题",
+      "comment_count": 6191
+    },
+    {
+      "topic_id": "t_7",
+      "display_name": "导演创作",
+      "comment_count": 3228
+    },
+    {
+      "topic_id": "t_8",
+      "display_name": "音乐配乐",
+      "comment_count": 2531
+    },
+    {
+      "topic_id": "t_9",
+      "display_name": "战争与反战",
+      "comment_count": 7116
+    },
+    {
+      "topic_id": "t_10",
+      "display_name": "剧情叙事",
+      "comment_count": 9245
+    },
+    {
+      "topic_id": "t_11",
+      "display_name": "评分与口碑",
+      "comment_count": 11940
+    },
+    {
+      "topic_id": "t_12",
+      "display_name": "人生哲思",
+      "comment_count": 5534
+    },
+    {
+      "topic_id": "t_13",
+      "display_name": "喜剧娱乐",
+      "comment_count": 6764
+    },
+    {
+      "topic_id": "t_14",
+      "display_name": "外貌追捧",
+      "comment_count": 4504
+    },
+    {
+      "topic_id": "t_15",
+      "display_name": "系列续作",
+      "comment_count": 6647
+    },
+    {
+      "topic_id": "t_16",
+      "display_name": "综合评价",
+      "comment_count": 3380
+    },
+    {
+      "topic_id": "t_17",
+      "display_name": "粉丝文化",
+      "comment_count": 3750
+    }
+  ],
+  "scope": "Historical stratified review sample. Ratings are explicit user attitude; emotions are model predictions. Counts are sample statistics, not population estimates.",
+  "sources": {
+    "modeling_design": "Retained model design and preprocessing outputs; dimensions and sample count checked against local modeling artifacts.",
+    "topic_counts": "Aggregate topic export; 18 counts sum to 123693.",
+    "node_counts": "Importer expectations and documented graph schema.",
+    "topic_projection": "Saved topic embedding projection; point positions and labels are preserved."
+  }
+}
