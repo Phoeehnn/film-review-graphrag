@@ -1,7 +1,7 @@
 import hashlib
 from pathlib import Path
 
-SERVICE_VERSION='1.4.2'
+SERVICE_VERSION='1.4.3'
 
 
 def runtime_source_hashes():

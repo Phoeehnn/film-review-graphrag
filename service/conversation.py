@@ -182,6 +182,29 @@ class ConversationService:
         conditions={};standalone=request.question;context_meta={};committed=False;phase_usage={}
         try:
             async with asyncio.timeout(max(.001,self.settings.query_timeout-(time.monotonic()-started))):
+                comparison=resolve_filters(request.question,Filters(),self.engine.movies,self.engine.topics)
+                if len(comparison.movies)>1:
+                    if request.filters.movie:
+                        raise ValueError('正在比较多部电影，请先把侧栏电影筛选改为“不限”。')
+                    # Compare in an isolated scope: a previous single-film pin must
+                    # never silently remove one of the explicitly named films.
+                    local=QueryRequest(**request.model_dump(include=set(QueryRequest.model_fields)))
+                    async for item in self.engine.events(local,started=started):
+                        if item['event']!='done':
+                            yield item
+                        else:
+                            result=QueryResult.model_validate(item['data'])
+                    result.warnings.append('本轮为独立多电影比较，仅使用本轮问题和侧栏筛选；原会话条件保留。继续比较时请写明电影名称。')
+                    result.conversation={'session_id':identifier,'version':original_version,'comparison':True,
+                        'state_committed':False,'standalone_question':request.question}
+                    if result.status not in ('error','timeout'):
+                        # Keep request replay without letting comparison evidence
+                        # or conditions contaminate the single-film conversation.
+                        result.conversation.update(version=original_version+1,state_committed=True)
+                        state.replay=(state.replay+[{'id':request.client_request_id,'digest':digest,'result':result.model_dump()}])[-3:]
+                        self.store.commit(state,original_version)
+                    yield {'event':'done','data':result.model_dump()}
+                    return
                 updates,unset=extract_patch(request.question,self.engine,request.filters)
                 for key in unset:
                     state.pinned.pop(key,None);state.pinned_sources.pop(key,None)
@@ -289,7 +312,8 @@ class ConversationService:
                 state.replay=(state.replay+[{'id':request.client_request_id,'digest':digest,'result':result.model_dump()}])[-3:]
                 self.store.commit(state,original_version);committed=True
         except (ValueError,ValidationError) as exc:
-            result=QueryResult(request_id=request_id,strategy='session',status='cannot_answer',answer='请先明确查询条件：'+str(exc),requested_strategy=request.strategy,
+            message='筛选条件格式不正确，请检查日期、星级范围和评论条数。' if isinstance(exc,ValidationError) else str(exc)
+            result=QueryResult(request_id=request_id,strategy='session',status='cannot_answer',answer='请先明确查询条件：'+message,requested_strategy=request.strategy,
                 conversation={'session_id':identifier,'version':original_version,'clarification_required':True})
             result.model_usage=usage.dump()
         except TimeoutError:

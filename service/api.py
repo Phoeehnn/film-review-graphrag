@@ -66,27 +66,36 @@ def create_app(engine=None, manage_lifecycle=True):
     async def ready():
         state = dict(await app.state.engine.ready())
         state['redis'] = await app.state.redis_layer.ready()
-        state['ready'] = state['ready'] and state['redis']['ready']
+        state['ready'] = state['ready'] and (state['redis']['ready'] or not app.state.redis_layer.settings.rate_limit_enabled)
         return JSONResponse(state,status_code=200 if state['ready'] else 503)
 
     async def require_ready():
         state = dict(await app.state.engine.ready())
         if app.state.redis_layer.enabled:
             state['redis'] = await app.state.redis_layer.ready()
-            state['ready'] = state['ready'] and state['redis']['ready']
+            state['ready'] = state['ready'] and (state['redis']['ready'] or not app.state.redis_layer.settings.rate_limit_enabled)
         if not state['ready']:
             raise HTTPException(status_code=503,detail={'code':'NOT_READY','state':state})
         return state
 
+    async def require_database():
+        try:
+            state=await app.state.engine.graph.ready()
+        except Exception:
+            raise HTTPException(503,detail={'code':'DATABASE_UNAVAILABLE','message':'数据服务暂不可用，请稍后重试'})
+        if not state['ready']:
+            raise HTTPException(503,detail={'code':'DATA_NOT_READY','message':'数据正在准备，请稍后刷新'})
+
     @app.get('/api/v1/stats')
     async def stats():
-        await require_ready()
+        await require_database()
         return await app.state.engine.graph.stats()
 
     @app.get('/api/v1/catalog')
     async def catalog():
-        await require_ready()
-        return {'movies':app.state.engine.movies,'topics':app.state.engine.topics,'topic_scope_note':topic_config()['scope_note'],'service_version':SERVICE_VERSION}
+        await require_database()
+        movies,topics=await app.state.engine.graph.catalog()
+        return {'movies':movies,'topics':topics,'topic_scope_note':topic_config()['scope_note'],'service_version':SERVICE_VERSION}
 
     @app.post('/api/v1/query',response_model=QueryResult)
     async def query(request: QueryRequest,http_request: Request):

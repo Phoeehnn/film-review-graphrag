@@ -11,6 +11,7 @@ from dotenv import load_dotenv
 
 from service.topics import friendly_text,friendly_value,topic_display
 from ui.presentation import heading,hero,metrics
+from ui.request_errors import failure_message
 
 load_dotenv()
 API=os.getenv('API_BASE_URL','http://127.0.0.1:18000').rstrip('/')
@@ -49,6 +50,7 @@ def queue_example(question,entry):
 
 
 def clear_history():
+    st.session_state.pop('failed_request',None)
     entry=st.session_state.get('entry_mode','检索问答')
     st.session_state['history_'+entry]=[]
     st.session_state.pop('pending_question',None)
@@ -140,6 +142,8 @@ def show_result(result):
     st.caption(f"{strategy} · {state} · {result['elapsed_seconds']:.2f} 秒 · {len(result['evidence'])} 项依据")
     for warning in result.get('warnings',[]):st.info(friendly_text(warning))
     if result.get('error'):st.warning('本次处理遇到问题，具体原因可在技术详情查看。')
+    if result['status']=='no_results':st.info('没有找到符合条件的记录。可以放宽日期、主题或星级筛选，再试一次。')
+    elif result['status']=='insufficient_evidence':st.info('当前依据不足。可以补充电影名称、缩小问题范围，或使用自动选择检索。')
     with st.expander('查看回答依据 · 原文、统计与关系图',expanded=False):
         labels=['原始评论','统计依据','关系图']
         if result.get('tool_calls'):labels.append('助手执行过程')
@@ -275,7 +279,7 @@ def render_explorer():
     history=st.session_state.setdefault('history_'+entry,[])
     if not history:
         hero();metrics(stats)
-        with st.form('first_question_form',clear_on_submit=True,border=False):
+        with st.form('first_question_form',clear_on_submit=False,border=False):
             first_question=st.text_input('输入你的问题',key='first_question_text',
                 placeholder='想了解哪部电影，或寻找怎样的评论？在这里输入…')
             submitted=st.form_submit_button('发送问题',type='primary',key='send_first_question',icon=':material/send:')
@@ -296,8 +300,15 @@ def render_explorer():
             if message.get('result'):show_result(message['result'])
     if history:
         typed=st.chat_input('问一部电影、找一种表达，或探索一个主题…',key='question_input')
-    question=st.session_state.pop('pending_question',None) or typed
+    retry=st.session_state.get('failed_request')
+    retry_clicked=st.session_state.pop('retry_requested',False) and bool(retry and retry['entry']==entry)
+    if retry and retry['entry']==entry:
+        st.caption('上次未完成：'+retry['question'])
+        st.caption('会话请求会复用原请求编号；独立问答和 Agent 重试可能产生新的模型费用。')
+        retry_clicked=st.button('重试刚才的问题',key='retry_failed_request') or retry_clicked
+    question=retry['question'] if retry_clicked else st.session_state.pop('pending_question',None) or typed
     if not question:return
+    if not retry_clicked:st.session_state.pop('failed_request',None)
     if entry!='Agent':
         try:
             for key in ('date_from','date_to'):
@@ -315,7 +326,9 @@ def render_explorer():
                 if entry=='Agent':
                     progress.caption('助手正在分步寻找证据…')
                     recent=[{'role':m['role'],'content':m['content'][:2000]} for m in history[-12:]]
-                    response=client.post(API+'/api/v1/agent',json={'question':question,'history':recent});response.raise_for_status()
+                    payload=retry['payload'] if retry_clicked else {'question':question,'history':recent}
+                    st.session_state['failed_request']={'entry':entry,'question':question,'endpoint':'/api/v1/agent','payload':payload}
+                    response=client.post(API+'/api/v1/agent',json=payload);response.raise_for_status()
                     result=response.json()
                 else:
                     parts,result=[],None
@@ -332,6 +345,9 @@ def render_explorer():
                         if not st.session_state.pop('recall_count_changed',False) and session_state:
                             payload['top_k']=session_state.get('active_conditions',{}).get('top_k',top_k)
                         endpoint='/api/v1/sessions/'+identifier+'/query/stream'
+                    if retry_clicked:
+                        endpoint,payload=retry['endpoint'],retry['payload']
+                    st.session_state['failed_request']={'entry':entry,'question':question,'endpoint':endpoint,'payload':payload}
                     with client.stream('POST',API+endpoint,json=payload) as response:
                         response.raise_for_status();event=None
                         for line in response.iter_lines():
@@ -346,8 +362,21 @@ def render_explorer():
                                 elif event=='done':result=data
                     if result is None:raise RuntimeError('连接结束前未收到最终结果')
             progress.empty();output.markdown(friendly_text(result['answer']));show_result(result)
+            if result['status'] in ('error','timeout'):
+                st.session_state['failed_request']['result']=result
+                st.warning(failure_message(result.get('error') or {}))
+                st.button('重试刚才的问题',key='retry_after_result',on_click=lambda: st.session_state.update(retry_requested=True))
+                return
+            st.session_state.pop('failed_request',None)
             history.extend([{'role':'user','content':question},{'role':'assistant','content':result['answer'],'result':result}])
             st.rerun()
         except (httpx.HTTPError,ValueError,RuntimeError,KeyError) as exc:
-            progress.empty();output.error('暂时未能完成请求，请检查服务状态后重试。')
-            with st.expander('查看错误详情'):st.code(str(exc))
+            progress.empty();output.error(failure_message(exc))
+            if isinstance(exc,httpx.HTTPStatusError) and exc.response.status_code in (404,409,422):
+                st.session_state.pop('failed_request',None)
+                if exc.response.status_code==404:st.session_state.pop('conversation_session',None)
+            st.caption('问题已保留。检查筛选后可以重新发送，或使用上方重试入口。')
+            if st.session_state.get('failed_request'):
+                st.button('重试刚才的问题',key='retry_after_error',on_click=lambda: st.session_state.update(retry_requested=True))
+            else:
+                st.button('重新发送这个问题',key='retry_draft',on_click=lambda: st.session_state.update(pending_question=question))

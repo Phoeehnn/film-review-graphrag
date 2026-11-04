@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 310" role="img" aria-label="电影、评论、主题和情绪相连的知识图谱结构示意">
+ <defs>
+  <linearGradient id="card" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#234b53"/><stop offset="1" stop-color="#142f3b"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-40%" width="160%" height="180%"><feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#244c40" flood-opacity=".13"/></filter>
+ </defs>
+ <g fill="none" stroke="#a6c5b5" stroke-width="1.7">
+  <path d="M159 151 C214 151 193 66 270 66"/><path d="M159 151 L279 159"/><path d="M159 151 C204 151 211 256 276 256"/>
+  <path d="M345 65 C399 65 383 129 432 129"/><path d="M348 159 L434 139"/><path d="M346 255 C400 255 378 217 425 217"/>
+ </g>
+ <g fill="#9bb9ab"><circle cx="210" cy="101" r="3"/><circle cx="212" cy="155" r="3"/><circle cx="211" cy="206" r="3"/><circle cx="388" cy="188" r="3"/></g>
+ <g filter="url(#shadow)">
+  <rect x="23" y="80" width="137" height="147" rx="17" fill="url(#card)"/>
+  <rect x="41" y="99" width="99" height="53" rx="8" fill="#38616a"/>
+  <g fill="#d9c69e"><rect x="52" y="106" width="4" height="5" rx="1"/><rect x="52" y="119" width="4" height="5" rx="1"/><rect x="52" y="133" width="4" height="5" rx="1"/><rect x="125" y="106" width="4" height="5" rx="1"/><rect x="125" y="119" width="4" height="5" rx="1"/><rect x="125" y="133" width="4" height="5" rx="1"/><path d="M83 113 L102 125 L83 137Z"/></g>
+  <text x="43" y="178" fill="#fff" font-size="16" font-weight="600" font-family="sans-serif">一部电影</text>
+  <text x="43" y="200" fill="#a9c5c8" font-size="10" font-family="sans-serif">汇集不同观众的声音</text>
+ </g>
+ <rect x="266" y="33" width="108" height="64" rx="13" fill="#fff" stroke="#d7e5dc"/>
+ <text x="281" y="58" fill="#294f54" font-size="13" font-family="sans-serif">评论原文</text><text x="281" y="78" fill="#a58758" font-size="12" font-family="sans-serif">★★★★★</text>
+ <rect x="279" y="125" width="108" height="64" rx="13" fill="#fff" stroke="#d7e5dc"/>
+ <text x="294" y="150" fill="#294f54" font-size="13" font-family="sans-serif">讨论主题</text><text x="294" y="172" fill="#7c9186" font-size="11" font-family="sans-serif">剧情 · 演技 · 人生</text>
+ <rect x="276" y="226" width="108" height="64" rx="13" fill="#fff" stroke="#d7e5dc"/>
+ <text x="291" y="251" fill="#294f54" font-size="13" font-family="sans-serif">文字情绪</text><text x="291" y="273" fill="#7c9186" font-size="11" font-family="sans-serif">感动 · 喜爱 · 愤怒</text>
+ <circle cx="451" cy="128" r="32" fill="#d7e8dc" stroke="#c2d9cc"/>
+ <text x="451" y="125" text-anchor="middle" fill="#4d786b" font-size="11" font-family="sans-serif">有据可查</text><text x="451" y="142" text-anchor="middle" fill="#4d786b" font-size="11" font-family="sans-serif">的回答</text>
+ <circle cx="444" cy="226" r="23" fill="#e8dfc7"/><text x="444" y="230" text-anchor="middle" fill="#927953" font-size="11" font-family="sans-serif">证据</text>
+ <g fill="#90ae9b"><circle cx="195" cy="40" r="4"/><circle cx="467" cy="43" r="3"/><circle cx="169" cy="267" r="3"/></g>
+</svg>
