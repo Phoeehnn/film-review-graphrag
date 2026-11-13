@@ -171,7 +171,7 @@
     "pages/5_Agent任务复核.py": "a9d2e3254cba1c3a63e68a05336d521b119c07108f244ea17a690a6bf06a7649",
     "pages/6_多轮与修复复核.py": "00c98c4faad1c003533705f3ad2ae996b69f44459da2cb980a5e5fb3bb85b352",
     "pytest.ini": "51ea33b6d86a8a80c52fb58b1619538278d7729fc0a4ff11981bf6a7ec32a114",
-    "README.md": "51977a00bfcb866902c32290cd2a9d0efe0d49f27aa66e6d77234108e97820d5",
+    "README.md": "fe15cd6a797acb5e472ed808e43afa2ca307e39fb5a2d810ce5e76b1bd0bdadd",
     "requirements-dev.txt": "04c05959f273c0fdd1ecd8af880c0b471688dd70303bd078610817aed5567f4b",
     "requirements-mcp.txt": "7d2220821ffa16f8b18b4dc3d68d94e3091a995651d0e1494f7f12140b750ecc",
     "requirements-service.in": "627ddbad43e5cf8e1c04960892776f90fddfcfe63e6934156b16010841a198ba",
@@ -241,9 +241,6 @@
     "ui/grading_help.py": "e13ed8d1194375098c16f69878402deaa62e10332614b6a7ab0674c4a1efb6a6",
     "ui/presentation.py": "17dffd39d2961a17a68775cd3e0c31b54d2ff3142aa8e7a3bb853b0bea62540e",
     "ui/request_errors.py": "9a1f2594bf04f4a948fd0e5d92941693303674df8d09d6b7408f15d9da46338e",
-    "ui/run_selection.py": "8fd0998b724caecbdf52bc5fca78bd661edefa30bc5638b8960feb3d8dac3cac",
-    "docs/demo/index.html": "c1af7ef21f952248bfa803e489b269dd42c6cd4ddb580b222c36c1c5f6464fe5",
-    "docs/demo/agent-demo.png": "65445e75d48cd22ee4592283c2e5d5023ef3d3c348304712425704392b797762",
-    ".github/workflows/demo-pages.yml": "e462001722184d8fd0a828847bfe0f5135dcd18cb7ba8bdaf6c88dac4e14ed16"
+    "ui/run_selection.py": "8fd0998b724caecbdf52bc5fca78bd661edefa30bc5638b8960feb3d8dac3cac"
   }
 }
